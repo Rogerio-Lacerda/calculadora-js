@@ -33,8 +33,15 @@ function calculadora() {
     }
   };
 
+  const styleKeys = (event) => {
+    setTimeout(() => {
+      event.target.classList.remove("active");
+    }, 100);
+  };
+
   _keys.forEach((item) => item.addEventListener("click", setValues));
   _keys.forEach((item) => item.addEventListener("click", resetValues));
   _keys.forEach((item) => item.addEventListener("click", setResult));
+  _keys.forEach((item) => item.addEventListener("mouseup", styleKeys));
 }
 calculadora();
