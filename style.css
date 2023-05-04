@@ -75,3 +75,10 @@ body {
   background: #111;
   grid-column: 2 / 5;
 }
+
+@media (max-width: 600px) {
+  .titulo {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
