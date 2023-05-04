@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  height: 100vh;
+  background: #111;
+}
+
+.titulo {
+  color: #913bf3;
+  font-size: 3rem;
+}
+
+.grid-calculadora {
+  align-self: start;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 8px;
+  border-radius: 4px;
+  background: #913bf3;
+  /* border: 1px solid #222; */
+  box-shadow: 0 0 4px #913bf3;
+  gap: 8px;
+  justify-self: center;
+}
+
+.resultado {
+  grid-column: 1 / -1;
+  background: #222;
+  height: 70px;
+  min-width: 250px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.teclas {
+  padding: 8px;
+  background: #222;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.3rem;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+  border: none;
+  transition: 0.3s;
+}
+
+.teclas.active {
+  transform: scale(0.8);
+}
+
+.teclas:hover {
+  box-shadow: initial;
+}
+
+[data-teclas="igual"] {
+  background: #111;
+  grid-column: 2 / 5;
+}
